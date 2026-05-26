@@ -2,8 +2,8 @@ export default function FarmDetail() {
   return (
     <>
       {/* Header Section: Farm Detail */}
-      <div className="grid grid-cols-12 gap-card-gap mb-card-gap">
-        <div className="col-span-12 bg-surface-panel rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] border border-outline-variant/10 overflow-hidden flex relative">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-card-gap mb-card-gap">
+        <div className="col-span-1 md:col-span-12 bg-surface-panel rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] border border-outline-variant/10 overflow-hidden flex flex-col md:flex-row relative">
           {/* Data Info Side */}
           <div className="flex-1 p-8 flex flex-col justify-center relative z-10 bg-gradient-to-r from-surface-panel via-surface-panel to-transparent">
             <div className="flex items-center gap-3 mb-2">
@@ -29,7 +29,7 @@ export default function FarmDetail() {
                 42.5 Hectares
               </span>
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 md:mt-auto">
               <div>
                 <p className="font-label-sm text-label-sm text-text-secondary uppercase mb-1">NAB Saat Ini</p>
                 <p className="font-kpi-value text-kpi-value text-primary-fixed-dim">$1.42 <span className="text-body-base font-normal text-text-secondary">/ Token</span></p>
@@ -45,7 +45,7 @@ export default function FarmDetail() {
             </div>
           </div>
           {/* Satellite Map Side */}
-          <div className="w-1/3 relative flex-shrink-0 border-l border-outline-variant/30 bg-surface-container-low">
+          <div className="w-full md:w-1/3 h-64 md:h-auto relative flex-shrink-0 border-t md:border-t-0 md:border-l border-outline-variant/30 bg-surface-container-low">
             <img 
               alt="Satellite view of farm" 
               className="w-full h-full object-cover opacity-80 mix-blend-luminosity" 
@@ -66,7 +66,7 @@ export default function FarmDetail() {
       </div>
 
       {/* Main Dashboard Grid */}
-      <div className="grid grid-cols-12 gap-card-gap">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-card-gap">
         {/* Left Column: Data Visualizations */}
         <div className="col-span-12 lg:col-span-8 flex flex-col gap-card-gap">
           {/* Sentinel-2 NDVI Area Chart */}
@@ -128,7 +128,7 @@ export default function FarmDetail() {
                 Lihat Semua <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
               </button>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Gallery Item 1 */}
               <div className="relative group rounded-lg overflow-hidden border border-outline-variant/20 aspect-video bg-surface-container">
                 <img alt="Mangosteen crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" src="/images/mangosteen_crop_1778566852128.png" />

@@ -55,7 +55,7 @@ export default function Marketplace() {
             </div>
           </div>
           <div className="p-6 flex-1 flex flex-col">
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <div>
                 <p className="font-label-sm text-label-sm text-text-secondary mb-1">Target Pendanaan</p>
                 <p className="font-headline-md text-headline-md font-bold text-text-primary">$250,000</p>
@@ -103,7 +103,7 @@ export default function Marketplace() {
             </div>
           </div>
           <div className="p-6 flex-1 flex flex-col">
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <div>
                 <p className="font-label-sm text-label-sm text-text-secondary mb-1">Target Pendanaan</p>
                 <p className="font-headline-md text-headline-md font-bold text-text-primary">$500,000</p>
@@ -149,7 +149,7 @@ export default function Marketplace() {
             </div>
           </div>
           <div className="p-6 flex-1 flex flex-col">
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <div>
                 <p className="font-label-sm text-label-sm text-text-secondary mb-1">Target Pendanaan</p>
                 <p className="font-headline-md text-headline-md font-bold text-text-primary">$120,000</p>

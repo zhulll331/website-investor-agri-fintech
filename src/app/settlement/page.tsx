@@ -19,7 +19,7 @@ export default function Settlement() {
       </div>
 
       {/* Bento Grid Layout */}
-      <div className="grid grid-cols-12 gap-card-gap mb-card-gap">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-card-gap mb-card-gap">
         {/* Summary KPI */}
         <div className="col-span-12 md:col-span-4 bg-surface-panel rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.3)] relative overflow-hidden">
           <div className="absolute -right-10 -top-10 w-40 h-40 bg-accent-magenta/10 rounded-full blur-3xl"></div>

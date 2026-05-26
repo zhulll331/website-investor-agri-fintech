@@ -17,7 +17,7 @@ export default function Analytics() {
       </div>
 
       {/* Main Bento Grid Layout */}
-      <div className="grid grid-cols-12 gap-card-gap">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-card-gap">
         {/* Satellite Telemetry & NDVI Analysis (Spans 8 cols) */}
         <section className="col-span-12 xl:col-span-8 glass-panel rounded-xl p-6 flex flex-col relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-accent-cyan/10 rounded-full blur-3xl -z-10 group-hover:bg-accent-cyan/20 transition-all duration-700"></div>
@@ -116,7 +116,7 @@ export default function Analytics() {
             </h3>
             <span className="font-label-sm text-label-sm text-text-secondary">Node Aktif: 1,402</span>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Sensor Card 1 */}
             <div className="bg-surface-container-low rounded-lg p-4 border border-outline-variant/20 hover:border-accent-cyan/50 transition-colors">
               <div className="flex justify-between items-start mb-2">

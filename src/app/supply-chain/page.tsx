@@ -7,7 +7,7 @@ export default function SupplyChain() {
         <p className="font-body-base text-body-base text-text-secondary">Pemantauan aliran aset waktu nyata untuk ekosistem Mangosteen Token (MGT).</p>
       </div>
 
-      <div className="grid grid-cols-12 gap-card-gap">
+      <div className="grid grid-cols-1 xl:grid-cols-12 gap-card-gap">
         {/* Live Node Map / Flow (Full Width) */}
         <div className="col-span-12 glass-panel rounded-xl p-6 shadow-lg">
           <h3 className="font-headline-md text-headline-md font-semibold text-text-primary mb-6 flex items-center">
