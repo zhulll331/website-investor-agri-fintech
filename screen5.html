@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RDFA-AgriChain - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#dce4e4",
+                        "app-bg": "#151521",
+                        "surface-panel": "#27293D",
+                        "on-surface-variant": "#b9cacb",
+                        "primary-container": "#00f2fe",
+                        "surface-variant": "#2e3637",
+                        "secondary-container": "#a100f0",
+                        "text-primary": "#FFFFFF",
+                        "surface-container-low": "#151d1e",
+                        "surface-bright": "#333b3b",
+                        "background": "#0d1515",
+                        "inverse-surface": "#dce4e4",
+                        "accent-purple": "#E14ECA",
+                        "on-primary-fixed": "#002022",
+                        "inverse-primary": "#00696f",
+                        "outline": "#849495",
+                        "on-primary": "#00373a",
+                        "on-tertiary-fixed": "#221b00",
+                        "tertiary": "#fff6e4",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#2e3637",
+                        "surface-container-high": "#232b2c",
+                        "on-tertiary-container": "#725e00",
+                        "on-secondary": "#4e0078",
+                        "surface-container": "#192122",
+                        "secondary-fixed-dim": "#e5b5ff",
+                        "inverse-on-surface": "#2a3232",
+                        "on-primary-container": "#006a70",
+                        "surface": "#0d1515",
+                        "outline-variant": "#3a494b",
+                        "accent-cyan": "#00F2FE",
+                        "tertiary-fixed": "#ffe173",
+                        "on-tertiary-fixed-variant": "#554500",
+                        "on-secondary-container": "#f7e1ff",
+                        "tertiary-container": "#fed83a",
+                        "text-secondary": "#8F9BB3",
+                        "secondary-fixed": "#f4d9ff",
+                        "surface-tint": "#00dce6",
+                        "on-secondary-fixed": "#30004b",
+                        "on-primary-fixed-variant": "#004f53",
+                        "on-tertiary": "#3b2f00",
+                        "on-secondary-fixed-variant": "#7000a8",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#e5b5ff",
+                        "primary-fixed": "#6ff6ff",
+                        "primary-fixed-dim": "#00dce6",
+                        "tertiary-fixed-dim": "#e8c423",
+                        "surface-dim": "#0d1515",
+                        "primary": "#e0fdff",
+                        "accent-magenta": "#B026FF",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#081010",
+                        "on-surface": "#dce4e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "margin-desktop": "2rem",
+                        "card-gap": "1.25rem",
+                        "margin-mobile": "1rem",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-base": ["Inter"],
+                        "kpi-value": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "kpi-value": ["32px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-app-bg text-on-background font-body-base min-h-screen selection:bg-accent-magenta/30 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-app-bg/80 backdrop-blur-md border-b border-outline-variant/20 flex justify-between items-center px-gutter ml-64 z-40">
+<div class="flex items-center gap-4">
+<h1 class="font-display-lg text-display-lg font-black text-accent-cyan tracking-tight">RDFA-AgriChain</h1>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-text-secondary hover:text-accent-magenta transition-colors cursor-pointer active:opacity-70" data-icon="wifi_tethering">wifi_tethering</span>
+<span class="material-symbols-outlined text-text-secondary hover:text-accent-magenta transition-colors cursor-pointer active:opacity-70" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-text-secondary hover:text-accent-magenta transition-colors cursor-pointer active:opacity-70" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-surface-panel shadow-[0_0_20px_rgba(0,0,0,0.5)] h-screen w-64 fixed left-0 top-0 flex flex-col h-full py-gutter z-50">
+<div class="px-6 mb-8">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden mb-4 border border-outline-variant/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-cyan" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-text-primary">RDFA-AgriChain</h2>
+<p class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider mt-1">Global Institutional</p>
+</div>
+<ul class="flex-1 px-4 space-y-2">
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-text-secondary hover:text-on-surface-variant hover:bg-surface-bright/20 transition-all duration-300 scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-text-secondary hover:text-on-surface-variant hover:bg-surface-bright/20 transition-all duration-300 scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-label-sm text-label-sm">Analytics</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-accent-cyan border-r-4 border-accent-cyan bg-surface-variant/30 transition-all duration-300 scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-label-sm text-label-sm font-bold">Portfolio</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-text-secondary hover:text-on-surface-variant hover:bg-surface-bright/20 transition-all duration-300 scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="font-label-sm text-label-sm">Supply Chain</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-text-secondary hover:text-on-surface-variant hover:bg-surface-bright/20 transition-all duration-300 scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</li>
+</ul>
+<div class="px-6 mt-auto">
+<button class="w-full py-3 rounded-lg bg-gradient-to-r from-accent-magenta to-accent-purple text-text-primary font-bold font-label-sm text-label-sm uppercase tracking-widest hover:shadow-[0_0_15px_rgba(176,38,255,0.5)] transition-shadow duration-300">
+                Trade Assets
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-margin-desktop pb-12 max-w-container-max mx-auto">
+<!-- Glowing Notification -->
+<div class="mb-8 p-4 rounded-xl bg-surface-panel border border-accent-cyan/30 flex items-center justify-between shadow-[0_0_20px_rgba(0,242,254,0.15)] relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-r from-accent-cyan/10 to-transparent opacity-50"></div>
+<div class="relative z-10 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-accent-cyan/20 flex items-center justify-center border border-accent-cyan text-accent-cyan shadow-[0_0_10px_rgba(0,242,254,0.5)]">
+<span class="material-symbols-outlined" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-accent-cyan uppercase tracking-wider">Recent Payout Confirmed</h3>
+<p class="font-body-base text-body-base text-text-secondary text-sm mt-1">Smart Contract execution successful for Phase 3 yield.</p>
+</div>
+</div>
+<button class="relative z-10 text-text-secondary hover:text-accent-cyan transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-card-gap mb-card-gap">
+<!-- Summary KPI -->
+<div class="col-span-12 md:col-span-4 bg-surface-panel rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.3)] relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-accent-magenta/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<p class="font-label-sm text-label-sm text-text-secondary uppercase tracking-widest mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span>
+                        Total Payouts Received
+                    </p>
+<h2 class="font-kpi-value text-kpi-value text-text-primary mb-4">$1,284,500<span class="text-accent-cyan text-lg ml-1">.00</span></h2>
+<div class="flex items-center gap-3">
+<div class="px-3 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/30 flex items-center gap-1">
+<span class="material-symbols-outlined text-accent-cyan text-[16px]" data-icon="trending_up">trending_up</span>
+<span class="font-label-sm text-label-sm text-accent-cyan font-bold">+12.4%</span>
+</div>
+<span class="font-body-base text-body-base text-text-secondary text-xs">vs last quarter</span>
+</div>
+</div>
+</div>
+<!-- ROI Chart -->
+<div class="col-span-12 md:col-span-8 bg-surface-panel rounded-xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.3)] flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-text-primary text-xl">ROI History</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-label-sm text-label-sm rounded bg-surface-variant text-text-primary hover:bg-surface-bright transition-colors">1M</button>
+<button class="px-3 py-1 text-xs font-label-sm text-label-sm rounded bg-accent-cyan/20 text-accent-cyan border border-accent-cyan/30 shadow-[0_0_10px_rgba(0,242,254,0.2)]">6M</button>
+<button class="px-3 py-1 text-xs font-label-sm text-label-sm rounded bg-surface-variant text-text-primary hover:bg-surface-bright transition-colors">1Y</button>
+</div>
+</div>
+<div class="flex-1 flex items-end gap-2 h-48 relative">
+<!-- Chart Background Grid -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="border-b border-outline w-full h-0"></div>
+<div class="border-b border-outline w-full h-0"></div>
+<div class="border-b border-outline w-full h-0"></div>
+<div class="border-b border-outline w-full h-0"></div>
+</div>
+<!-- Bars -->
+<div class="w-full flex justify-between items-end h-full px-2">
+<!-- Bar Item -->
+<div class="flex flex-col items-center gap-2 group w-1/6">
+<div class="w-full bg-gradient-to-t from-surface-variant to-outline-variant rounded-t-sm h-[30%] relative group-hover:from-accent-cyan/20 group-hover:to-accent-cyan/50 transition-all duration-300"></div>
+<span class="font-label-sm text-[10px] text-text-secondary">Jan</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/6">
+<div class="w-full bg-gradient-to-t from-surface-variant to-outline-variant rounded-t-sm h-[45%] relative group-hover:from-accent-cyan/20 group-hover:to-accent-cyan/50 transition-all duration-300"></div>
+<span class="font-label-sm text-[10px] text-text-secondary">Feb</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/6">
+<div class="w-full bg-gradient-to-t from-surface-variant to-outline-variant rounded-t-sm h-[60%] relative group-hover:from-accent-cyan/20 group-hover:to-accent-cyan/50 transition-all duration-300"></div>
+<span class="font-label-sm text-[10px] text-text-secondary">Mar</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/6">
+<div class="w-full bg-gradient-to-t from-surface-variant to-outline-variant rounded-t-sm h-[50%] relative group-hover:from-accent-cyan/20 group-hover:to-accent-cyan/50 transition-all duration-300"></div>
+<span class="font-label-sm text-[10px] text-text-secondary">Apr</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/6">
+<div class="w-full bg-gradient-to-t from-surface-variant to-outline-variant rounded-t-sm h-[75%] relative group-hover:from-accent-cyan/20 group-hover:to-accent-cyan/50 transition-all duration-300"></div>
+<span class="font-label-sm text-[10px] text-text-secondary">May</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/6">
+<div class="w-full bg-gradient-to-t from-accent-magenta/30 to-accent-magenta rounded-t-sm h-[90%] relative shadow-[0_0_15px_rgba(176,38,255,0.4)]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-surface-container px-2 py-1 rounded text-xs font-bold text-accent-magenta border border-accent-magenta/30 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">8.2%</div>
+</div>
+<span class="font-label-sm text-[10px] text-accent-magenta font-bold">Jun</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transaction Table -->
+<div class="col-span-12 bg-surface-panel rounded-xl shadow-[0_4px_30px_rgba(0,0,0,0.3)] overflow-hidden">
+<div class="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-surface-panel/50 backdrop-blur">
+<h3 class="font-headline-md text-headline-md text-text-primary text-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-cyan" data-icon="receipt_long">receipt_long</span>
+                        Settlement History
+                    </h3>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant text-text-secondary hover:text-text-primary hover:border-outline transition-colors text-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+                        Export CSV
+                    </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-variant/30 font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">
+<th class="p-4 pl-6 font-medium">Date &amp; Time</th>
+<th class="p-4 font-medium">Asset ID</th>
+<th class="p-4 font-medium">Status</th>
+<th class="p-4 font-medium text-right">Amount</th>
+<th class="p-4 pr-6 font-medium text-right">Verification</th>
+</tr>
+</thead>
+<tbody class="font-body-base text-body-base text-sm divide-y divide-outline-variant/20">
+<tr class="hover:bg-surface-bright/10 transition-colors group">
+<td class="p-4 pl-6 text-on-surface-variant">2023-10-27 14:32:01 UTC</td>
+<td class="p-4 text-text-primary font-mono text-xs">AGRI-SOY-992A</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan text-xs font-bold tracking-wide shadow-[0_0_5px_rgba(0,242,254,0.2)]">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span>
+                                        Panen Selesai - ROI 8% Distributed
+                                    </span>
+</td>
+<td class="p-4 text-right text-text-primary font-bold">+$42,500.00</td>
+<td class="p-4 pr-6 text-right">
+<a class="inline-flex items-center gap-1 text-accent-magenta hover:text-accent-purple transition-colors text-xs font-mono uppercase tracking-wider group-hover:underline" href="#">
+<span class="material-symbols-outlined text-[14px]" data-icon="link">link</span>
+                                        0x7a...4f2b
+                                    </a>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright/10 transition-colors group">
+<td class="p-4 pl-6 text-on-surface-variant">2023-09-15 09:12:44 UTC</td>
+<td class="p-4 text-text-primary font-mono text-xs">AGRI-WHT-104B</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan text-xs font-bold tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span>
+                                        Panen Selesai - ROI 7.5% Distributed
+                                    </span>
+</td>
+<td class="p-4 text-right text-text-primary font-bold">+$18,200.00</td>
+<td class="p-4 pr-6 text-right">
+<a class="inline-flex items-center gap-1 text-text-secondary hover:text-accent-cyan transition-colors text-xs font-mono uppercase tracking-wider group-hover:underline" href="#">
+<span class="material-symbols-outlined text-[14px]" data-icon="link">link</span>
+                                        0x3b...9e1a
+                                    </a>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright/10 transition-colors group">
+<td class="p-4 pl-6 text-on-surface-variant">2023-08-02 11:45:10 UTC</td>
+<td class="p-4 text-text-primary font-mono text-xs">AGRI-CORN-77X</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-variant border border-outline-variant text-text-secondary text-xs font-medium tracking-wide">
+<span class="material-symbols-outlined text-[12px]" data-icon="pending">pending</span>
+                                        Processing Audit
+                                    </span>
+</td>
+<td class="p-4 text-right text-text-secondary font-medium">--</td>
+<td class="p-4 pr-6 text-right">
+<span class="text-text-secondary text-xs italic">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-outline-variant/30 bg-surface-panel/50 flex justify-center">
+<button class="text-xs font-label-sm text-text-secondary hover:text-accent-cyan transition-colors flex items-center gap-1">
+                        View All Records <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

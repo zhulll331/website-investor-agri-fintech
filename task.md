@@ -1,0 +1,11 @@
+# Tasks
+- [x] Initialize Next.js project with Tailwind CSS
+- [x] Download all 6 HTML templates
+- [x] Configure `tailwind.config.ts` and `globals.css`
+- [x] Create `SideNavBar` and `TopAppBar` layout components
+- [ ] Build Main Portfolio Dashboard (`/`)
+- [x] Build Marketplace - Harvest Pools (`/marketplace`)
+- [x] Build Farm Detail & Due Diligence (`/farm-detail`)
+- [x] Build Advanced Analytics & Monitoring Dashboard (`/analytics`)
+- [x] Build Settlement & ROI History (`/settlement`)
+- [x] Build Supply Chain Traceability Dashboard (`/supply-chain`)
